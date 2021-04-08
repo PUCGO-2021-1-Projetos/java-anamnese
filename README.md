@@ -10,6 +10,8 @@
 - **COMUNICAÇÃO:** Linha de comando (CLI) - Terminal
 
 
+Fiz uma mundaça
+
 # Sintomas
 
 
@@ -33,6 +35,7 @@
 
 ## Influenza H1N1
 
+Fiz outra mudança
 
 -- --
 
