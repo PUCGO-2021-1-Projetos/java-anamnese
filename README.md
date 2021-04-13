@@ -26,7 +26,7 @@ Com a informações dos sintomas do paciente, podemos oferecer um rápido aponta
 
 # Como usar o sistema
 
-### Passo 1 - Compreender o que o usuário deseja**
+### Compreender o que o usuário deseja
 
 No menu inicial, o usuário informar o que deseja, selecionando uma das seguintes opções:
 
@@ -41,7 +41,93 @@ Vamos começar?
 1) Listar doenças reconhecidas
 2) Listar sintomas
 3) Realizar anamnese
+4) Sair
 --
 Informe o que deseja fazer: _
-
 ```
+
+**Opção 1 - Listar doenças reconhecidas:** aqui você vai obter a lista de doenças que o sistema reconhece.
+
+**Opção 2 - Listar sintomas:** aqui você vai obter uma lista de possíveis sintomas dentre as doenças reconhecidas pelo sistema.
+
+**Opção 3 - Realizar anamnese:** aqui você vai poder informar os sintomas reportados pelo paciente e obter um rápido possível pré-diagnóstico do paciente.
+
+### Opção 1 - Listar doenças reconhecidas
+
+Ao selecionar a `opção 1`, você terá o seguinte resultado:
+
+```bash
+As doenças reconhecidas pelo sistema são:
+
+- Influenza (H1N1)
+- Pneumonia
+- Corona Virus (Covid-19)
+
+--
+
+Vamos continuar?
+
+--
+1) Listar doenças reconhecidas
+2) Listar sintomas
+3) Realizar anamnese
+-
+4) Sair
+--
+Informe o que deseja fazer: _
+```
+
+### Opção 2 - Listar sintomas
+
+Ao selecionar a `opção 2`, você terá o seguinte resultado:
+
+```bash
+Vamos listar os possíveis sintomas reconhecidos. Para isso, selecione uma doença:
+
+1) Influenza (H1N1)
+2) Pneumonia
+3) Corona Virus (Covid-19)
+-
+4) Voltar
+--
+Deseja listar os sintomas de qual doença: _
+```
+
+Ao selecionar uma doença, você terá o seguinte resultado:
+
+```bash
+Você selecionou: INFLUENZA (H1N1)
+
+Os sintomas são:
+
+- Febre;
+- Tosse;
+- Coriza;
+- Dor de garganta;
+- Dor muscular;
+- Dor de cabeça;
+- Mal-estar;
+- Irritação nos olhos;
+- Falta de apetite;
+- Falta de ar;
+- Calafrios;
+- Cansaço e fadiga;
+- Vômitos e náuseas e
+- Diarreia.
+
+--
+
+Selecione outra doença:
+
+1) Influenza (H1N1)
+2) Pneumonia
+3) Corona Virus (Covid-19)
+-
+4) Voltar
+--
+Deseja listar os sintomas de qual doença: _
+```
+
+### Opção 3 - Realizar anamnese
+
+Ao selecionar a `opção 3`, você terá o seguinte resultado:
