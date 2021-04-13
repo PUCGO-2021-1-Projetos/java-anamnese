@@ -8,13 +8,21 @@ Este projeto contempla os requisitos apresentados para a **Unidade de Aprendizag
 
 A esta coletagem dos sintomas, excluindo as condições de saúde do paciente (irrelevante para este projeto), damos o nome de **anamnese*. Sabemos que este nome vai além do que fazemos, mas consideramos que o que fazemos faz uma pequena parte desse procedimento, então, assim o nomeamos.
 
-## Por que fazemos anamnese?
+## Por que fazemos anamnese do paciente?
 
-*Descrever aqui o objetivo de existência do sistema*
+**Anamnese** e o ato de realizar uma entrevista a um paciente por profissional de saúde, com o objetivo de relembrar todos os fatos relacionados ao que o paciente está sentindo, reclamando, revelando ao profissional de saúde. Com o colhimento destes dados, alguns apontamentos podem ser realizados, dentre eles, a possível doença do paciente.
+
+## Quem é o usuário deste projeto
+
+Este projeto visa o uso por um **profissional de saúde**.
+
+## Quem é diagnosticado
+
+Um **paciente** atendido por um profissional de saúde.
 
 ## Benefícios oferecidos pelo Pré-diagnóstico do Sistema
 
-*Descrever aqui os benefícios que o sistema oferece*
+Com a informações dos sintomas do paciente, podemos oferecer um rápido apontamento das possíveis doenças que ele *pode* ter.
 
 # Como usar o sistema
 
