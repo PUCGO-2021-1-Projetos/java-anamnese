@@ -1,6 +1,6 @@
 # PUC Anamnese Grupo 07
 
-*Descrever aqui o sistema faz*
+Este sistema tem como objetivo de apontar um ***possível pré-diagnóstico*** um paciente identificado sobre qual possível doença que ele possui através dos sintomas informados. Tal pré-diagnóstico não garante, porém, auxilia na identificação das doenças do paciente.
 
 # Contextualização
 
