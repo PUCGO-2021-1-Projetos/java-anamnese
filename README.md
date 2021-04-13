@@ -26,8 +26,22 @@ Com a informações dos sintomas do paciente, podemos oferecer um rápido aponta
 
 # Como usar o sistema
 
-*Descrever como o sistema irá funcionar*
+### Passo 1 - Compreender o que o usuário deseja**
 
-## Passo a Passo
+No menu inicial, o usuário informar o que deseja, selecionando uma das seguintes opções:
 
-*Descrever passo-a-passo como usar o sistema*
+```bash
+Olá, bem-vindo ao PUC Anamnese Grupo 07 - Anamnese.
+
+Aqui você poderá obter, de forma ágil, um possível pré-diagnóstico de algum paciente sendo atendido.
+
+Vamos começar?
+
+--
+1) Listar doenças reconhecidas
+2) Listar sintomas
+3) Realizar anamnese
+--
+Informe o que deseja fazer: _
+
+```
