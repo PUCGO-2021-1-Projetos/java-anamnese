@@ -8,34 +8,93 @@
 - **INPUT:** Sintomas (escolha múltipla)
 - **OUTPUT:** Pré-diagnóstico sobre qual doença o paciente posui;
 - **COMUNICAÇÃO:** Linha de comando (CLI) - Terminal
-
-
-Fiz uma mundaça
-
+-- --
 # Sintomas
 
-
-## H1N1:
+## Influenza H1N1:
 - Febre;
-- Tosse;
+- Tosse seca;
 - Coriza;
 - Dor de garganta;
-- Dor muscular;
+- Dores musculares;
 - Dor de cabeça;
 - Mal-estar;
-- Irritação nos olhos;
+- Conjutivite;
 - Falta de apetite;
-- Falta de ar;
+- Dificuldade de respirar;
 - Calafrios;
 - Cansaço e fadiga;
-- Vômitos e náuseas e
+- Vômitos e náuseas
 - Diarreia.
 
 ## Covid 19
+- Sintomas mais comuns:
+	- Febre;
+	- Tosse seca;
+	- Cansaço e fadiga.
+- Sintomas menos comuns:
+	- Dores musculares;
+	- Dor de garganta;
+	- Diarreia;
+	- Conjutivite;
+	- Dor de cabeça;
+	- Perda de paladar;
+	- Perda de olfato;
+	- Erupção cutânea na pele;
+	- Descoloração dos dedos das mãos ou dos pés.
+- Sintomas graves:
+	- Dificultade de respirar;
+	- Dor no peito;
+	- Perda de fala ou movimento.
 
-## Influenza H1N1
+## Pneumonia
+- Dificuldade de respirar;
+- Respiração mais rápida que o normal;
+- Febre;
+- Tosse seca;
+- Tosse com catarro esverdeado ou com sangue;
+- Dor no peito;
+- Suor noturno;
+- Cansaço e fadiga;
+- Dores musculares;
+- Dor de cabeça.
 
-Fiz outra mudança
+## Sintomas comuns às 3 doenças
+- Febre;
+- Tosse seca;
+- Dores musculares;
+- Dor de cabeça;
+- Dificuldade de respirar;
+- Cansaço e fadiga.
+
+## Sintomas comuns à Covid-19 e Pneumonia
+- Dor no peito.
+
+## Sintomas comuns à Covid-19 e Influenza H1N1
+- Dor de garganta;
+- Conjutivite;
+- Diarreia.
+
+## Sintomas comuns à Influenza H1N1 e Pneumonia
+- Nenhum
+
+## Sintomas exclusivos da Influenza H1N1
+- Coriza
+- Falta de apetite
+- Calafrios
+- Vômitos e náuseas
+
+## Sintomas exclusivos do Covid-19
+- Perda de paladar
+- Perda de olfato
+- Erupção cutânea na pele
+- Descoloração dos dedos das mãos ou dos pés
+- Perda de fala ou movimento
+
+## Sintomas exclusivos da Pneumonia
+- Respiração mais rápida que o normal
+- Tosse com catarro esverdeado ou com sangue
+- Suor noturno
 
 -- --
 

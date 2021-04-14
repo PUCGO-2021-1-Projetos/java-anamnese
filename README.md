@@ -6,7 +6,7 @@ Este sistema tem como objetivo de apontar um ***possível pré-diagnóstico*** u
 
 Este projeto contempla os requisitos apresentados para a **Unidade de Aprendizagem: Projeto Integrator I-A**. Os requisitos regem a necessidade de pré-diagnosticar um determinado paciente através da análise de seus sintomas apresentados. Contudo, aqui dizemos que *apontamos um possível pré-diagnóstico*, devido a complexidade desta análise.
 
-A esta coletagem dos sintomas, excluindo as condições de saúde do paciente (irrelevante para este projeto), damos o nome de **anamnese*. Sabemos que este nome vai além do que fazemos, mas consideramos que o que fazemos realiza uma pequena parte desse procedimento, então, assim o nomeamos.
+A esta coletagem dos sintomas, excluindo as condições de saúde do paciente (irrelevante para este projeto), damos o nome de **anamnese**. Sabemos que este nome vai além do que fazemos, mas consideramos que o que fazemos realiza uma pequena parte desse procedimento, então, assim o nomeamos.
 
 ## Por que fazemos anamnese do paciente?
 
@@ -131,3 +131,49 @@ Deseja listar os sintomas de qual doença: _
 ### Opção 3 - Realizar anamnese
 
 Ao selecionar a `opção 3`, você terá o seguinte resultado:
+
+```bash
+Por favor informe o(s) sintoma(s) do paciente:
+
+Sintomas:
+
+1) Febre
+2) Tosse seca
+3) Tosse com catarro esverdeado ou com sangue
+4) Dores musculares
+5) Dor de cabeça
+6) Dificuldade de respirar
+7) Cansaço e fadiga
+8) Coriza
+9) Falta de apetite
+10) Calafrios
+11) Vômitos e náuseas
+12) Perda de paladar
+13) Perda de olfato
+14) Erupção cutânea na pele
+15) Descoloração dos dedos das mãos ou dos pés
+16) Perda de fala ou movimento
+17) Respiração mais rápida que o normal
+18) Suor noturno
+19) Dor no peito
+20) Conjutivite
+21) Diarreia
+22) Dor de Garganta
+--
+V) Voltar
+F) Finalizar
+--
+Informe o sintoma: _
+```
+### Opção F - Finalizar
+Ao selecionar a opção `Finalizar` o programa fará a análise e exibirá o resultado da anamnese informando qual a provável doença contraída.
+
+```bash
+De acordo com os dados informados a probabilidade do paciente ter contraído as seguintes doenças é:
+--
+Covid-19: Alta
+Influenza H1N1: Média
+Pneumonia: Baixa
+--
+Voltar ao menu inicial? (S - Sim /N - Não): _
+```
