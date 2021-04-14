@@ -28,7 +28,7 @@ Com a informações dos sintomas do paciente, podemos oferecer um rápido aponta
 
 ### Compreender o que o usuário deseja
 
-No menu inicial, o usuário informar o que deseja, selecionando uma das seguintes opções:
+No menu inicial, o usuário irá informar o que deseja, selecionando uma das seguintes opções:
 
 ```bash
 Olá, bem-vindo ao PUC Anamnese Grupo 07 - Anamnese.
