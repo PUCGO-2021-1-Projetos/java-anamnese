@@ -6,7 +6,7 @@ Este sistema tem como objetivo de apontar um ***possível pré-diagnóstico*** u
 
 Este projeto contempla os requisitos apresentados para a **Unidade de Aprendizagem: Projeto Integrator I-A**. Os requisitos regem a necessidade de pré-diagnosticar um determinado paciente através da análise de seus sintomas apresentados. Contudo, aqui dizemos que *apontamos um possível pré-diagnóstico*, devido a complexidade desta análise.
 
-A esta coletagem dos sintomas, excluindo as condições de saúde do paciente (irrelevante para este projeto), damos o nome de **anamnese*. Sabemos que este nome vai além do que fazemos, mas consideramos que o que fazemos faz uma pequena parte desse procedimento, então, assim o nomeamos.
+A esta coletagem dos sintomas, excluindo as condições de saúde do paciente (irrelevante para este projeto), damos o nome de **anamnese*. Sabemos que este nome vai além do que fazemos, mas consideramos que o que fazemos realiza uma pequena parte desse procedimento, então, assim o nomeamos.
 
 ## Por que fazemos anamnese do paciente?
 
