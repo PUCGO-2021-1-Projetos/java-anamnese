@@ -163,7 +163,7 @@ Sintomas:
 V) Voltar
 F) Finalizar
 --
-Informe o sintoma: _
+Informe o sintoma ou digite "D" para diagnosticar ou "V" para voltar: _
 ```
 ### Opção F - Finalizar
 Ao selecionar a opção `Finalizar` o programa fará a análise e exibirá o resultado da anamnese informando qual a provável doença contraída.
