@@ -209,6 +209,7 @@ public class Main {
             loop = validaInput(listaSintomas, sintomas, input);
 
         } while (loop);
+
         /**
          * O trecho que virá aqui calcula a probabilidade das doenças.
          *
@@ -229,6 +230,13 @@ public class Main {
          *
          * 3) Caso apresente pelo menos 1 dos sintomas exclusivos (vide
          * REQUISITOS.md) a probabilidade será alta para aquela doença.
+         * 
+         * Dica:
+         * 1 - para acessar um item dentro do array sintomas utilize o comando sintomas.get(index)
+         * onde "index" é o numero do indice do intem ao qual vc deseja acessar.
+         * 
+         * 2 - para limpar todos os itens dentro do array sintomas para que uma novo diagnostico possa ser feito
+         * utilize o comando sintomas.clear()
          */
     }
 
