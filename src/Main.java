@@ -249,14 +249,11 @@ public class Main {
                     sintomas.add(input);
                     System.out.println("\nSintoma selecionado com sucesso!");
                 } else {
-                    for (int i = 0; i < sintomas.size(); i++) {
-                        if (sintomas.contains(input)) {
-                            System.out.println("\nEste sintoma já foi selecionado. Escolha outro.");
-                            return true;
-                        } else {
-                            sintomas.add(input);
-                            System.out.println("\nSintoma selecionado com sucesso!");
-                        }
+                    if (sintomas.contains(input)) {
+                        System.out.println("\nEste sintoma já foi selecionado. Por favor escolha outro.");
+                    } else {
+                        sintomas.add(input);
+                        System.out.println("\nSintoma selecionado com sucesso!");
                     }
                 }
             } else {
