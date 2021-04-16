@@ -41,6 +41,7 @@ Vamos começar?
 1) Listar doenças reconhecidas
 2) Listar sintomas
 3) Realizar anamnese
+--
 4) Sair
 --
 Informe o que deseja fazer: _
