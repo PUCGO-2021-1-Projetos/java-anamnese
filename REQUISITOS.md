@@ -14,50 +14,46 @@
 ## Influenza H1N1:
 - Febre;
 - Tosse seca;
-- Coriza;
-- Dor de garganta;
 - Dores musculares;
 - Dor de cabeça;
-- Mal-estar;
-- Conjutivite;
-- Falta de apetite;
 - Dificuldade de respirar;
-- Calafrios;
 - Cansaço e fadiga;
-- Vômitos e náuseas
+- Coriza;
+- Falta de apetite;
+- Calafrios;
+- Vômitos e náuseas;
+- Dor de garganta;
+- Conjutivite;
 - Diarreia.
 
-## Covid 19
-- Sintomas mais comuns:
-	- Febre;
-	- Tosse seca;
-	- Cansaço e fadiga.
-- Sintomas menos comuns:
-	- Dores musculares;
-	- Dor de garganta;
-	- Diarreia;
-	- Conjutivite;
-	- Dor de cabeça;
-	- Perda de paladar;
-	- Perda de olfato;
-	- Erupção cutânea na pele;
-	- Descoloração dos dedos das mãos ou dos pés.
-- Sintomas graves:
-	- Dificultade de respirar;
-	- Dor no peito;
-	- Perda de fala ou movimento.
-
 ## Pneumonia
-- Dificuldade de respirar;
-- Respiração mais rápida que o normal;
 - Febre;
 - Tosse seca;
-- Tosse com catarro esverdeado ou com sangue;
-- Dor no peito;
-- Suor noturno;
-- Cansaço e fadiga;
 - Dores musculares;
-- Dor de cabeça.
+- Dor de cabeça;
+- Dificuldade de respirar;
+- Cansaço e fadiga;
+- Respiração mais rápida que o normal;
+- Tosse com catarro esverdeado ou com sangue;
+- Suor noturno;
+- Dor no peito.
+
+## Covid 19
+- Febre;
+- Tosse seca;
+- Dores musculares;
+- Dor de cabeça;
+- Dificuldade de respirar;
+- Cansaço e fadiga;
+- Perda de paladar;
+- Perda de olfato;
+- Erupção cutânea na pele;
+- Descoloração dos dedos das mãos ou dos pés;
+- Perda de fala ou movimento;
+- Dor no peito;
+- Dor de garganta;
+- Conjutivite;
+- Diarreia.
 
 ## Sintomas comuns às 3 doenças
 - Febre;
@@ -76,25 +72,25 @@
 - Diarreia.
 
 ## Sintomas comuns à Influenza H1N1 e Pneumonia
-- Nenhum
+- Nenhum.
 
 ## Sintomas exclusivos da Influenza H1N1
-- Coriza
-- Falta de apetite
-- Calafrios
-- Vômitos e náuseas
-
-## Sintomas exclusivos do Covid-19
-- Perda de paladar
-- Perda de olfato
-- Erupção cutânea na pele
-- Descoloração dos dedos das mãos ou dos pés
-- Perda de fala ou movimento
+- Coriza;
+- Falta de apetite;
+- Calafrios;
+- Vômitos e náuseas.
 
 ## Sintomas exclusivos da Pneumonia
-- Respiração mais rápida que o normal
-- Tosse com catarro esverdeado ou com sangue
-- Suor noturno
+- Respiração mais rápida que o normal;
+- Tosse com catarro esverdeado ou com sangue;
+- Suor noturno.
+
+## Sintomas exclusivos do Covid-19
+- Perda de paladar;
+- Perda de olfato;
+- Erupção cutânea na pele;
+- Descoloração dos dedos das mãos ou dos pés;
+- Perda de fala ou movimento.
 
 -- --
 

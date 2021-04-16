@@ -84,13 +84,13 @@ Ao selecionar a `opção 2`, você terá o seguinte resultado:
 ```bash
 Vamos listar os possíveis sintomas reconhecidos. Para isso, selecione uma doença:
 
+--
 1) Influenza (H1N1)
 2) Pneumonia
 3) Corona Virus (Covid-19)
--
-4) Voltar
 --
-Deseja listar os sintomas de qual doença: _
+
+Escolha uma doença para para listar os sitomas ou digite "V" para voltar: _
 ```
 
 Ao selecionar uma doença, você terá o seguinte resultado:
@@ -100,32 +100,27 @@ Você selecionou: INFLUENZA (H1N1)
 
 Os sintomas são:
 
-- Febre;
-- Tosse;
-- Coriza;
-- Dor de garganta;
-- Dor muscular;
-- Dor de cabeça;
-- Mal-estar;
-- Irritação nos olhos;
-- Falta de apetite;
-- Falta de ar;
-- Calafrios;
-- Cansaço e fadiga;
-- Vômitos e náuseas e
-- Diarreia.
+- Febre
+- Tosse seca
+- Dores musculares
+- Dor de cabeça
+- Dificuldade de respirar
+- Cansaço e fadiga
+- Coriza
+- Falta de apetite
+- Calafrios
+- Vômitos e náuseas
+- Dor de Garganta
+- Conjutivite
+- Diarreia
 
 --
-
-Selecione outra doença:
-
 1) Influenza (H1N1)
 2) Pneumonia
 3) Corona Virus (Covid-19)
--
-4) Voltar
 --
-Deseja listar os sintomas de qual doença: _
+
+Escolha uma doença para para listar os sitomas ou digite "V" para voltar: _
 ```
 
 ### Opção 3 - Realizar anamnese
@@ -135,38 +130,35 @@ Ao selecionar a `opção 3`, você terá o seguinte resultado:
 ```bash
 Por favor informe o(s) sintoma(s) do paciente:
 
-Sintomas:
+listaSintomas:
 
 1) Febre
 2) Tosse seca
-3) Tosse com catarro esverdeado ou com sangue
-4) Dores musculares
-5) Dor de cabeça
-6) Dificuldade de respirar
-7) Cansaço e fadiga
-8) Coriza
-9) Falta de apetite
-10) Calafrios
-11) Vômitos e náuseas
-12) Perda de paladar
-13) Perda de olfato
-14) Erupção cutânea na pele
-15) Descoloração dos dedos das mãos ou dos pés
-16) Perda de fala ou movimento
-17) Respiração mais rápida que o normal
+3) Dores musculares
+4) Dor de cabeça
+5) Dificuldade de respirar
+6) Cansaço e fadiga
+7) Coriza
+8) Falta de apetite
+9) Calafrios
+10) Vômitos e náuseas
+11) Perda de paladar
+12) Perda de olfato
+13) Erupção cutânea na pele
+14) Descoloração dos dedos das mãos ou dos pés
+15) Perda de fala ou movimento
+16) Respiração mais rápida que o normal
+17) Tosse com catarro esverdeado ou com sangue
 18) Suor noturno
 19) Dor no peito
-20) Conjutivite
-21) Diarreia
-22) Dor de Garganta
+20) Dor de Garganta
+21) Conjutivite
+22) Diarreia
 --
-V) Voltar
-F) Finalizar
---
-Informe o sintoma ou digite "D" para diagnosticar ou "V" para voltar: _
+Informe o sintoma ou digite "D" para diagnosticar ou "V" para voltar: 
 ```
-### Opção F - Finalizar
-Ao selecionar a opção `Finalizar` o programa fará a análise e exibirá o resultado da anamnese informando qual a provável doença contraída.
+### Opção D - Diagnosticar
+Ao selecionar a opção `Diagnosticar` o programa fará a análise e exibirá o resultado da anamnese informando qual a provável doença contraída.
 
 ```bash
 De acordo com os dados informados a probabilidade do paciente ter contraído as seguintes doenças é:
