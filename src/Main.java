@@ -12,10 +12,22 @@ public class Main {
     public static void main(String[] args) throws IOException {
         // ==============================================================      
         // === Declaração de objetos e variáveis que serão utilizados ===
-        // ==============================================================      
+        // ============================================================== 
+        // Objeto que será usado para capturar o input do usuário
         Scanner scanner = new Scanner(System.in);
+        // Variável que irá armazenar o input do usuário capturado pelo scanner
         String input = "";
+        // Variável que fará o controle do looping do menu principal impedindo que o programa encerre sem que o usuário finalize
         boolean loop = true;
+
+        //Array contento a lista dos sintomas das 3 doenças.
+        //Os sintomas estão organizados na seguinte ordem:
+        //0 - 5:   Sintomas comuns entre as 3 doenças
+        //6 - 9:   Sintomas exclusivos do H1N1
+        //10 - 14: Sintomas exclusivos do Covid-19
+        //15 - 17: Sintomas exclusivos da Pineumonia
+        //18:      Sintoma comum ao par Covid-19 e Pneumonia
+        //19 - 21: Sintomas comuns ao par Covid-19 e H1N1
         String[] listaSintomas = {
             /*0*/"Febre",
             /*1*/ "Tosse seca",
@@ -136,18 +148,21 @@ public class Main {
                 case "1":
                     System.out.println("\nVocê selecionou: INFLUENZA (H1N1)\n");
                     System.out.println("Os sintomas são:\n");
+                    // Este método é o responsável por listar os sintomas da doença dado um intervalo de números predefinido
                     listarSintomasDoenca(listaSintomas, 0, 9);
                     listarSintomasDoenca(listaSintomas, 19, 21);
                     break;
                 case "2":
                     System.out.println("\nVocê selecionou: PNEUMONIA\n");
                     System.out.println("Os sintomas são:\n");
+                    // Este método é o responsável por listar os sintomas da doença dado um intervalo de números predefinido
                     listarSintomasDoenca(listaSintomas, 0, 5);
                     listarSintomasDoenca(listaSintomas, 15, 18);
                     break;
                 case "3":
                     System.out.println("\nVocê selecionou: Corona Virus (Covid-19)\n");
                     System.out.println("Os sintomas são:\n");
+                    // Este método é o responsável por listar os sintomas da doença dado um intervalo de números predefinido
                     listarSintomasDoenca(listaSintomas, 0, 5);
                     listarSintomasDoenca(listaSintomas, 10, 14);
                     listarSintomasDoenca(listaSintomas, 18, 21);
@@ -173,20 +188,25 @@ public class Main {
      * @param input
      */
     private static void realizarAnamnese(String[] listaSintomas, Scanner scanner, String input) {
+        // Chave que fará o controle do loop do...while.
         boolean loop = true;
+        // Um array dinâmico que comportará os sintomas escolhidos pelo usuário
         ArrayList<String> sintomas = new ArrayList<>();
 
         do {
             // Este trecho exibe na tela os listaSintomas e ao final captura e valida input do usuário
             System.out.println("\nPor favor informe o(s) sintoma(s) do paciente:");
             System.out.println("\nlistaSintomas:\n");
+            // Este loop percorre todo o array que contém a lista de sintomas e exibe-os
             for (int i = 0; i < listaSintomas.length; i++) {
                 System.out.println((i + 1) + ") " + listaSintomas[i]);
             }
             System.out.println("--");
             System.out.print("Informe o sintoma ou digite \"D\" para diagnosticar ou \"V\" para voltar: ");
             input = scanner.nextLine();
-            loop = validaSintoma(sintomas, input);
+
+            // Aqui será feita a validação e a inserção do input do usuário no array juntamente com a seleção da chave de controle do loop, ou seja, se o loop deve continuar ou não.
+            loop = validaInput(listaSintomas, sintomas, input);
 
         } while (loop);
         /**
@@ -195,18 +215,20 @@ public class Main {
          * Regras da probabilidade para o diagnostico:
          *
          * 1) Caso o paciente não apresente nenhum dos sintomas exclusivos de
-         * alguma doença e uma quantidade menor que a dos sintomas comuns o
-         * sistema deve exibir uma mensagem informando que não é possível
-         * realizar um diagnóstico com essa quantidade de informações.
+         * alguma doença e uma quantidade menor que a dos sintomas comuns entre
+         * as 3 doenças (vide REQUISITOS.md) o sistema deve exibir uma mensagem
+         * informando que não é possível realizar um diagnóstico com essa
+         * quantidade de informações.
          *
          * 2) Caso apresente apenas os sintomas comuns entre as 3 doenças a
          * probabilidade será baixa para todas
          *
-         * 3) Caso apresente algum sintoma dentre os pares de sintomas comuns a
+         * 3) Caso apresente algum sintoma dentre os pares de sintomas comuns
+         * (ex: sintomas comuns entre Covid-19 e H1N1. Vide REQUISITOS.md) a
          * probabilidade será média para os pares de doenças.
          *
-         * 3) Caso apresente pelo menos 1 dos sintomas exclusivos a
-         * probabilidade será alta para aquela doença.
+         * 3) Caso apresente pelo menos 1 dos sintomas exclusivos (vide
+         * REQUISITOS.md) a probabilidade será alta para aquela doença.
          */
     }
 
@@ -241,29 +263,40 @@ public class Main {
      * @param input
      * @return
      */
-    private static boolean validaSintoma(ArrayList<String> sintomas, String input) {
+    private static boolean validaInput(String[] listaSintomas, ArrayList<String> sintomas, String input) {
 
         try {
+            //Tenta converter o input(String) para int e verifica se esta entre 1 e 22.
             if (Integer.parseInt(input) >= 1 && Integer.parseInt(input) <= 22) {
+                //verifica se o array de sintomas está vazio
                 if (sintomas.isEmpty()) {
-                    sintomas.add(input);
+                    // adiciona o sintoma informado pelo usuário no array sintomas
+                    sintomas.add(listaSintomas[Integer.parseInt(input) - 1]);
                     System.out.println("\nSintoma selecionado com sucesso!");
                 } else {
-                    if (sintomas.contains(input)) {
+                    // verifica se o sintoma informado pelo usuário correspondente na listaSintomas já existe dentro do array sintomas
+                    if (sintomas.contains(listaSintomas[Integer.parseInt(input) - 1])) {
+                        // Caso exista exibe a mensagem de erro para o usuário
                         System.out.println("\nEste sintoma já foi selecionado. Por favor escolha outro.");
                     } else {
-                        sintomas.add(input);
+                        // Caso não exista adiciona o sintoma no array sintomas
+                        sintomas.add(listaSintomas[Integer.parseInt(input) - 1]);
                         System.out.println("\nSintoma selecionado com sucesso!");
                     }
                 }
             } else {
+                // Caso esteja fora do intervalo 1 - 22 exibe a mensagem de erro para o usuário
                 System.out.println("\nOpção inválida.");
             }
+            // Caso a conversão para int de errado será executado o trecho abaixo
         } catch (NumberFormatException e) {
             input = input.toUpperCase();
+            // Verifica se o input digitado foi D ou V
             if (input.equals("D") || input.equals("V")) {
+                // Caso seja D ou V desliga a chave de controle do loop retornado o valor false
                 return false;
             } else {
+                // Caso não seja D nem V informa a mensagem de erro e prossegue com o código mantendo a chave de controle ligada retornando o valor true
                 System.out.println("\nOpção inválida.");
             }
         }
