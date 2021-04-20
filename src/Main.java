@@ -74,7 +74,7 @@ public class Main {
      * @param scanner
      * @param listaSintomas
      * @param input
-     * @return
+     * @return boolean
      */
     private static boolean menuPrincipal(Scanner scanner, String[] listaSintomas, String input) {
 
@@ -188,8 +188,6 @@ public class Main {
      * @param input
      */
     private static void realizarAnamnese(String[] listaSintomas, Scanner scanner, String input) {
-        // Chave que fará o controle do loop do...while.
-        boolean loop = true;
         // Um array dinâmico que comportará os sintomas escolhidos pelo usuário
         ArrayList<String> sintomas = new ArrayList<>();
 
@@ -204,11 +202,12 @@ public class Main {
             System.out.println("--");
             System.out.print("Informe o sintoma ou digite \"D\" para diagnosticar ou \"V\" para voltar: ");
             input = scanner.nextLine();
+            input = input.toUpperCase();
 
             // Aqui será feita a validação e a inserção do input do usuário no array juntamente com a seleção da chave de controle do loop, ou seja, se o loop deve continuar ou não.
-            loop = validaInput(listaSintomas, sintomas, input);
+            validaInput(listaSintomas, sintomas, input);
 
-        } while (loop);
+        } while (!input.equals("D") && !input.equals("V"));
 
         /**
          * O trecho que virá aqui calcula a probabilidade das doenças.
@@ -230,13 +229,13 @@ public class Main {
          *
          * 3) Caso apresente pelo menos 1 dos sintomas exclusivos (vide
          * REQUISITOS.md) a probabilidade será alta para aquela doença.
-         * 
-         * Dica:
-         * 1 - para acessar um item dentro do array sintomas utilize o comando sintomas.get(index)
-         * onde "index" é o numero do indice do intem ao qual vc deseja acessar.
-         * 
-         * 2 - para limpar todos os itens dentro do array sintomas para que uma novo diagnostico possa ser feito
-         * utilize o comando sintomas.clear()
+         *
+         * Dica: 1 - para acessar um item dentro do array sintomas utilize o
+         * comando sintomas.get(index) onde "index" é o numero do indice do
+         * intem ao qual vc deseja acessar.
+         *
+         * 2 - para limpar todos os itens dentro do array sintomas para que uma
+         * novo diagnostico possa ser feito utilize o comando sintomas.clear()
          */
     }
 
@@ -262,16 +261,13 @@ public class Main {
      * estiver ele adiciona o sintoma no array sintomas. Caso o usuário tenha
      * digitado uma letra ocorrerá um erro de conversão NumberFormatException
      * que irá executar o bloco catch, onde o sistema passa o imput para
-     * maúsculo e verifica se é igual a D ou V, e caso seja, finaliza a
-     * repetição while "desligando" a variável de controle para loop = false.
-     * Caso nenhuma das verificações sejam satisfeitas é exibida uma mensagem de
-     * erro para o usuário.
+     * maiúsculo e verifica se é igual a D ou V. Caso nenhuma das verificações
+     * sejam satisfeitas é exibida uma mensagem de erro para o usuário.
      *
      * @param sintomas
      * @param input
-     * @return
      */
-    private static boolean validaInput(String[] listaSintomas, ArrayList<String> sintomas, String input) {
+    private static void validaInput(String[] listaSintomas, ArrayList<String> sintomas, String input) {
 
         try {
             //Tenta converter o input(String) para int e verifica se esta entre 1 e 22.
@@ -296,18 +292,14 @@ public class Main {
                 // Caso esteja fora do intervalo 1 - 22 exibe a mensagem de erro para o usuário
                 System.out.println("\nOpção inválida.");
             }
-            // Caso a conversão para int de errado será executado o trecho abaixo
+            // Caso a conversão para int de errado, então o usuario terá digitado uma letra e será executado o trecho abaixo
+            // para verificar se essa letra é D ou V
         } catch (NumberFormatException e) {
-            input = input.toUpperCase();
-            // Verifica se o input digitado foi D ou V
-            if (input.equals("D") || input.equals("V")) {
-                // Caso seja D ou V desliga a chave de controle do loop retornado o valor false
-                return false;
-            } else {
-                // Caso não seja D nem V informa a mensagem de erro e prossegue com o código mantendo a chave de controle ligada retornando o valor true
+            // Verifica se o input digitado é diferente de D e V
+            if (!input.equals("D") && !input.equals("V")) {
+                // Caso verdadeiro exibe a mensagem de erro
                 System.out.println("\nOpção inválida.");
             }
         }
-        return true;
     }
 }
