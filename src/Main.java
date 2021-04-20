@@ -204,7 +204,7 @@ public class Main {
             input = scanner.nextLine();
             input = input.toUpperCase();
 
-            // Aqui será feita a validação e a inserção do input do usuário no array juntamente com a seleção da chave de controle do loop, ou seja, se o loop deve continuar ou não.
+            // Aqui será feita a validação e a inserção do input do usuário no array sintomas.
             validaInput(listaSintomas, sintomas, input);
 
         } while (!input.equals("D") && !input.equals("V"));
@@ -232,7 +232,9 @@ public class Main {
          *
          * Dica: 1 - para acessar um item dentro do array sintomas utilize o
          * comando sintomas.get(index) onde "index" é o numero do indice do
-         * intem ao qual vc deseja acessar.
+         * intem ao qual vc deseja acessar. Ou pode ser usado o comando
+         * sintomas.contains() para verificar se o item desejado está contido no
+         * array sintomas.
          *
          * 2 - para limpar todos os itens dentro do array sintomas para que uma
          * novo diagnostico possa ser feito utilize o comando sintomas.clear()
