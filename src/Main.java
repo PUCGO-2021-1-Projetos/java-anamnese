@@ -140,16 +140,18 @@ public class Main {
     // ========================
     System.out.println("Olá, bem-vindo ao PUC Anamnese Grupo 07 - Anamnese\n");
     System.out.println(
-      "Aqui você poderá obter, de forma ágil, um possível pré-diagnóstico sobre suas queixas.\n"
+      "Aqui você poderá obter, de forma ágil, um possível pré-diagnóstico sobre suas queixas."
     );
-    System.out.println("Vamos começar?\n");
+    System.out.println();
+    System.out.println("Vamos começar?");
+    System.out.println();
 
     // Objeto que será usado para capturar o input do usuário
     Scanner scanner = new Scanner(System.in);
 
     do {
-      loop = menuPrincipal(scanner);
-    } while (loop);
+      loop = Main.menuPrincipal(scanner);
+    } while (loop == true);
 
     scanner.close();
   }
@@ -178,30 +180,25 @@ public class Main {
     
     String input = scanner.nextLine();
 
-    // Marcação se processo ira continuar de acordo com o INPUT do usuário.
-    // Padrão: continuar
-    boolean keepProcess = true;
-
     switch (input) {
       case "1":
-        listarDoencas();
+        Main.listarDoencas();
         break;
       case "2":
-        listarSintomas(scanner);
+        Main.listarSintomas(scanner);
         break;
       case "3":
-        realizarAnamnese(scanner);
+        Main.realizarAnamnese(scanner);
         break;
       case "4":
         System.out.println("\nObrigado por utilizar PUC Anamnese!");
-        keepProcess = false;
-        break;
+        return false;
       default:
         System.out.println("\nOpção Inválida");
         break;
     }
 
-    return keepProcess;
+    return true;
   }
 
   /**
@@ -232,13 +229,12 @@ public class Main {
       "\nVamos listar os possíveis sintomas reconhecidos. Para isso, selecione uma doença:"
     );
 
-    String input = "";
+    String input;
 
     do {
       System.out.println("\n--");
 
-      int i;
-      for(i = 0; i < Main.DOENCAS.length; i++) {
+      for(int i = 0; i < Main.DOENCAS.length; i++) {
         System.out.println(
           (i+1) + ") " + Main.DOENCAS[i]
         );
@@ -267,14 +263,15 @@ public class Main {
         continue;
       }
 
-      if (opcaoInput > Main.DOENCAS.length) {
+      if (opcaoInput < 1 || opcaoInput > Main.DOENCAS.length) {
         // Se o indice informado não está dentro do limite de doenças suportadas,
         // volta ao início perguntando novamente.
-        System.out.println("\nOpção inválida.");
+        System.out.println();
+        System.out.println("Opção inválida.");
         continue;
       }
 
-      // Normaliza a entrada de acordo com íncice de lista (array)
+      // Normaliza a entrada de acordo com índice de lista (array)
       Integer index = opcaoInput - 1;
      
       // Nome da doença a ser exbido ao usuário de acordo com indice da lista.
@@ -299,7 +296,8 @@ public class Main {
           listarSintomasDoenca(Main.PNEUMONIA_SINTOMAS);
           break;
         default:
-            System.out.println("\nOpção inválida.");
+            System.out.println();
+            System.out.println("Opção inválida.");
             break;
       }
     } while (!input.equals("V"));
@@ -323,7 +321,8 @@ public class Main {
    * Este método é responsável por receber os inputs dos sintomas e calcular o
    * diagnostico da anamnese.
    *
-   * @param scanner
+   * @param Scanner scanner - Objeto que possui suporte de resgatar entrada do
+   *                          usuário
    */
   private static void realizarAnamnese(Scanner scanner) {
 
@@ -361,7 +360,7 @@ public class Main {
       Integer opcaoInput = 0;
 
       try {
-        // Conversão do input inforado pelo usuário
+        // Conversão do input informado pelo usuário
         opcaoInput = Integer.parseInt(input);
       } catch(NumberFormatException e) {
         System.out.println("Informe um número válido.");
@@ -375,7 +374,7 @@ public class Main {
         continue;
       }
       
-      // Normaliza a entrada de acordo com íncice de lista (array)
+      // Normaliza a entrada de acordo com índice de lista (array)
       Integer index = opcaoInput - 1;
 
       System.out.println("> Sintoma: " + opcaoInput + " - " + Main.SINTOMAS[index]);
@@ -395,7 +394,10 @@ public class Main {
         System.out.println(" - " + sintomas);
       }
 
-      System.out.println("\nProcessing...\n");
+      System.out.println();
+      System.out.println("Processando...");
+      System.out.println();
+
       try {
         Thread.sleep(1000);//time is in ms (1000 ms = 1 second)
       } catch (InterruptedException e) {e.printStackTrace();}
@@ -410,14 +412,15 @@ public class Main {
 
       System.out.println("\n\n");
       System.out.println("--");
-    }    
+    }
   }
 
   /**
    * Processa pré-diagnostico com possíveis doenças
+   * 
    * @param Integer[] sintomasDoenca - Sintomas de uma doença reconhecidos
-   * @param String[] sintomasInformados - Sintomas informados pelo usuário
-   * @return String - INCERTO, IMPROVÁVEL, POUCO PROVÁVEL, PROVAVEL, MUITO PROVAVEL
+   * @param String[]  sintomasInformados - Sintomas informados pelo usuário
+   * @return String   INCERTO, IMPROVÁVEL, POUCO PROVÁVEL, PROVAVEL, MUITO PROVAVEL
    */
   protected static String mostraProbabilidadeDoanca(Integer[] sintomasDoenca, ArrayList<String> sintomasInformados) {
     Integer counter = 0;
