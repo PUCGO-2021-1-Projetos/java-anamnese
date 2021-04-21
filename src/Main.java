@@ -135,16 +135,6 @@ public class Main {
     // que o programa encerre sem que o usuário finalize
     boolean loop = true;
 
-    //Array contento a lista dos sintomas das 3 doenças.
-    //Os sintomas estão organizados na seguinte ordem:
-    // 0-5:   Sintomas comuns entre as 3 doenças
-    // 6-9:   Sintomas exclusivos do H1N1
-    // 10-14: Sintomas exclusivos do Covid-19
-    // 15-17: Sintomas exclusivos da Pineumonia
-    // 18:    Sintoma comum ao par Covid-19 e Pneumonia
-    // 19-21: Sintomas comuns ao par Covid-19 e H1N1
-    // String[] listaSintomas = {};
-
     // ========================
     // === Código principal ===
     // ========================
