@@ -33,7 +33,7 @@ No menu inicial, o usuário irá informar o que deseja, selecionando uma das seg
 ```bash
 Olá, bem-vindo ao PUC Anamnese Grupo 07 - Anamnese.
 
-Aqui você poderá obter, de forma ágil, um possível pré-diagnóstico de algum paciente sendo atendido.
+Aqui você poderá obter, de forma ágil, um possível pré-diagnóstico sobre suas queixas.
 
 Vamos começar?
 
@@ -97,7 +97,7 @@ Escolha uma doença para para listar os sitomas ou digite "V" para voltar: _
 Ao selecionar uma doença, você terá o seguinte resultado:
 
 ```bash
-Você selecionou: INFLUENZA (H1N1)
+Você selecionou: INFLUENZA (H1N1) (alias: H1N1)
 
 Os sintomas são:
 
@@ -164,9 +164,9 @@ Ao selecionar a opção `Diagnosticar` o programa fará a análise e exibirá o 
 ```bash
 De acordo com os dados informados a probabilidade do paciente ter contraído as seguintes doenças é:
 --
-Covid-19: Alta
-Influenza H1N1: Média
-Pneumonia: Baixa
+- Covid-19: MUITO PROVÁVEL
+- Influenza H1N1: PROVÁVEL
+- Pneumonia: POUCO PROVÁVEL
 --
 Voltar ao menu inicial? (S - Sim /N - Não): _
 ```
