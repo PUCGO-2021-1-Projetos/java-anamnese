@@ -404,23 +404,23 @@ public class Main {
       for(String sintomas : listaSintomas) {
         System.out.println(" - " + sintomas);
       }
-    }
 
-    System.out.println("\nProcessing...\n");
-    try {
-      Thread.sleep(1000);//time is in ms (1000 ms = 1 second)
-    } catch (InterruptedException e) {e.printStackTrace();}
+      System.out.println("\nProcessing...\n");
+      try {
+        Thread.sleep(1000);//time is in ms (1000 ms = 1 second)
+      } catch (InterruptedException e) {e.printStackTrace();}
 
-    System.out.println(
-      "De acordo com os dados informados a probabilidade do paciente ter contraído as seguintes doenças é:"
-    );
+      System.out.println(
+        "De acordo com os dados informados a probabilidade do paciente ter contraído as seguintes doenças é:"
+      );
 
-    System.out.println("- " + Main.COVID19 + ": " + mostraProbabilidadeDoance(Main.COVID19_SINTOMAS, listaSintomas));
-    System.out.println("- " + Main.H1N1 + ": " + mostraProbabilidadeDoance(Main.H1N1_SINTOMAS, listaSintomas));
-    System.out.println("- " + Main.PNEUMONIA + ": " + mostraProbabilidadeDoance(Main.PNEUMONIA_SINTOMAS, listaSintomas));
+      System.out.println("- " + Main.COVID19 + ": " + mostraProbabilidadeDoanca(Main.COVID19_SINTOMAS, listaSintomas));
+      System.out.println("- " + Main.H1N1 + ": " + mostraProbabilidadeDoanca(Main.H1N1_SINTOMAS, listaSintomas));
+      System.out.println("- " + Main.PNEUMONIA + ": " + mostraProbabilidadeDoanca(Main.PNEUMONIA_SINTOMAS, listaSintomas));
 
-    System.out.println("\n\n");
-    System.out.println("--");
+      System.out.println("\n\n");
+      System.out.println("--");
+    }    
   }
 
   /**
@@ -429,7 +429,7 @@ public class Main {
    * @param String[] sintomasInformados - Sintomas informados pelo usuário
    * @return String - INCERTO, IMPROVÁVEL, POUCO PROVÁVEL, PROVAVEL, MUITO PROVAVEL
    */
-  protected static String mostraProbabilidadeDoance(Integer[] sintomasDoenca, ArrayList<String> sintomasInformados) {
+  protected static String mostraProbabilidadeDoanca(Integer[] sintomasDoenca, ArrayList<String> sintomasInformados) {
     Integer counter = 0;
 
     for (int i = 0; i < Main.SINTOMAS.length; i++) {
