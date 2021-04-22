@@ -112,7 +112,7 @@ Os sintomas são:
 - Calafrios
 - Vômitos e náuseas
 - Dor de Garganta
-- Conjutivite
+- Conjuntivite
 - Diarreia
 
 --
