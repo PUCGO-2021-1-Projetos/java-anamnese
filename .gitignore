@@ -1,2 +1,5 @@
 .vscode
 build.xml
+dist
+nbproject
+build
