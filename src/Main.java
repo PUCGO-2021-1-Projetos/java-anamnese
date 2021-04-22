@@ -165,6 +165,9 @@ public class Main {
    * @param Scanner scanner - Objeto que possui suporte de resgatar entrada do
    *                          usuário
    * @return boolean - TRUE se o menu principal continua ativo. FALSE para encerrar
+   *
+   * Menu princiapl 
+   *
    */
   private static boolean menuPrincipal(Scanner scanner) {
 
