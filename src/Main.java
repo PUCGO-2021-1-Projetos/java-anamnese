@@ -49,7 +49,7 @@ public class Main {
     /*12*/"Falta de apetite",
     /*13*/"Falta de ar",
     /*14*/"Febre",
-    /*15*/"Irritaçã nos olhos",
+    /*15*/"Irritação nos olhos",
     /*16*/"Mal-estar",
     /*17*/"Perda de fala ou movimento",
     /*18*/"Perda de olfato",
