@@ -138,6 +138,7 @@ public class Main {
     // ========================
     // === Código principal ===
     // ========================
+    clearConsole();
     System.out.println("Olá, bem-vindo ao PUC Anamnese Grupo 07 - Anamnese\n");
     System.out.println(
       "Aqui você poderá obter, de forma ágil, um possível pré-diagnóstico sobre suas queixas."
@@ -169,7 +170,7 @@ public class Main {
    * Menu princiapl 
    *
    */
-  private static boolean menuPrincipal(Scanner scanner) {
+  private static boolean menuPrincipal(Scanner scanner) throws IOException {
 
     // Exibição do menu no terminal
     System.out.println("--");
@@ -182,6 +183,7 @@ public class Main {
     System.out.print("Informe o que deseja fazer: ");
     
     String input = scanner.nextLine();
+    clearConsole();
 
     switch (input) {
       case "1":
@@ -194,10 +196,11 @@ public class Main {
         Main.realizarAnamnese(scanner);
         break;
       case "4":
-        System.out.println("\nObrigado por utilizar PUC Anamnese!");
+        clearConsole();
+        System.out.println("Obrigado por utilizar PUC Anamnese!\n");
         return false;
       default:
-        System.out.println("\nOpção Inválida");
+        System.out.println("Opção Inválida\n");
         break;
     }
 
@@ -209,7 +212,7 @@ public class Main {
    * Este método é responsável por listar as doenças reconhecidas pelo sistema
    */
   private static void listarDoencas() {
-    System.out.println("\nAs doenças reconhecidas pelo sistema são:\n");
+    System.out.println("As doenças reconhecidas pelo sistema são:\n");
 
     for(String doenca : Main.DOENCAS) {
       System.out.println(
@@ -227,9 +230,9 @@ public class Main {
    * @param Scanner scanner - Objeto que possui suporte de resgatar entrada do
    *                          usuário
    */
-  private static void listarSintomas(Scanner scanner) {
+  private static void listarSintomas(Scanner scanner) throws IOException{
     System.out.println(
-      "\nVamos listar os possíveis sintomas reconhecidos. Para isso, selecione uma doença:"
+      "Vamos listar os possíveis sintomas reconhecidos. Para isso, selecione uma doença:"
     );
 
     String input;
@@ -250,9 +253,11 @@ public class Main {
         "Escolha uma doença para para listar os sitomas: "
       );
       input = scanner.nextLine().toUpperCase();
+      clearConsole();
 
       if (input.equals("V")) {
         // Define o loop até aqui.
+        clearConsole();
         continue;
       }
 
@@ -262,6 +267,7 @@ public class Main {
         // Conversão do input inforado pelo usuário
         opcaoInput = Integer.parseInt(input);
       } catch(NumberFormatException e) {
+        clearConsole();
         System.out.println("Informe um número válido.");
         continue;
       }
@@ -269,7 +275,7 @@ public class Main {
       if (opcaoInput < 1 || opcaoInput > Main.DOENCAS.length) {
         // Se o indice informado não está dentro do limite de doenças suportadas,
         // volta ao início perguntando novamente.
-        System.out.println();
+        clearConsole();
         System.out.println("Opção inválida.");
         continue;
       }
@@ -284,7 +290,7 @@ public class Main {
       String doenca = Main.DOENCAS_CHAVES[index];
 
       // Exibindo para usuário
-      System.out.println("\nVocê selecionou: " + nomeDoenca + " (alias: "+doenca+")\n");
+      System.out.println("Você selecionou: " + nomeDoenca + " (alias: "+doenca+")\n");
       System.out.println("Os sintomas são:\n");
 
       // Listando de acordo com a opção informada pelo usuário
@@ -327,10 +333,10 @@ public class Main {
    * @param Scanner scanner - Objeto que possui suporte de resgatar entrada do
    *                          usuário
    */
-  private static void realizarAnamnese(Scanner scanner) {
+  private static void realizarAnamnese(Scanner scanner) throws IOException{
 
     // Este trecho exibe na tela os listaSintomas e ao final captura e valida input do usuário
-    System.out.println("\nPor favor informe o(s) sintoma(s) do paciente:");
+    System.out.println("Por favor informe o(s) sintoma(s) do paciente:\n");
     // Este loop percorre todo o array que contém a lista de sintomas e exibe-os
     for (int i = 0; i < Main.SINTOMAS.length; i++) {
       System.out.println((i + 1) + ") " + Main.SINTOMAS[i]);
@@ -347,9 +353,10 @@ public class Main {
         "Informe o sintoma ou (\"D\": diagnosticar, \"V\": Voltar, \"R\": recomeçar): "
       );
       input = scanner.nextLine().toUpperCase();
-      
+
       if (input.equals("V") || input.equals("D")) {
         // Define o loop até aqui.
+        clearConsole();
         continue;
       }
 
@@ -370,10 +377,10 @@ public class Main {
         continue;
       }
 
-      if (opcaoInput > Main.SINTOMAS.length) {
+      if (opcaoInput < 1 || opcaoInput > Main.SINTOMAS.length) {
         // Se o indice informado não está dentro do limite de sitomas suportadas,
         // volta ao início perguntando novamente.
-        System.out.println("\nOpção inválida.");
+        System.out.println("Opção inválida.");
         continue;
       }
       
@@ -391,15 +398,13 @@ public class Main {
     } while (!input.equals("D") && !input.equals("V"));
 
     if (input.equals("D")) {
-      System.out.println("\nSintomas informados: ");
+      System.out.println("Sintomas informados: ");
 
       for(String sintomas : listaSintomas) {
         System.out.println(" - " + sintomas);
       }
 
-      System.out.println();
-      System.out.println("Processando...");
-      System.out.println();
+      System.out.println("\nProcessando...\n");
 
       try {
         Thread.sleep(1000);//time is in ms (1000 ms = 1 second)
@@ -414,7 +419,6 @@ public class Main {
       System.out.println("- " + Main.PNEUMONIA + ": " + mostraProbabilidadeDoanca(Main.PNEUMONIA_SINTOMAS, listaSintomas));
 
       System.out.println("\n\n");
-      System.out.println("--");
     }
   }
 
@@ -458,5 +462,20 @@ public class Main {
     }
 
     return "INCERTO";
+  }
+  //Este método detecta qual sistema operacional em uso e utiliza o comando apropriado para limpar o console
+  protected static void clearConsole() throws IOException {
+
+    try {
+
+        if (System.getProperty("os.name").contains("Windows")) {
+            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        } else {
+            System.out.print("\033[H\033[2J");
+            System.out.flush();
+        }
+
+    } catch (IOException | InterruptedException ex) {
+    }
   }
 }
