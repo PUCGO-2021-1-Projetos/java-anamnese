@@ -12,48 +12,58 @@
 # Sintomas
 
 ## Influenza H1N1:
-- Febre;
-- Tosse seca;
-- Dores musculares;
-- Dor de cabeça;
-- Dificuldade de respirar;
-- Cansaço e fadiga;
-- Coriza;
-- Falta de apetite;
-- Calafrios;
-- Vômitos e náuseas;
-- Dor de garganta;
-- Conjutivite;
-- Diarreia.
 
-## Pneumonia
-- Febre;
-- Tosse seca;
-- Dores musculares;
-- Dor de cabeça;
-- Dificuldade de respirar;
-- Cansaço e fadiga;
-- Respiração mais rápida que o normal;
-- Tosse com catarro esverdeado ou com sangue;
-- Suor noturno;
-- Dor no peito.
+- Calafrios
+- Cansaço e Fadiga
+- Coriza
+- Descoloração dos dedos das mãos ou dos pés
+- Diarréia
+- Dificuldade de respirar
+- Dor de cabeça,
+- Dor de garganta
+- Dores musculares
+- Falta de apetite
+- Falta de ar
+- Febre
+- Irritação nos olhos
+- Mal-estar
+- Tosse
+- Vomitos e nauseas
+
 
 ## Covid 19
-- Febre;
-- Tosse seca;
-- Dores musculares;
-- Dor de cabeça;
-- Dificuldade de respirar;
-- Cansaço e fadiga;
-- Perda de paladar;
-- Perda de olfato;
-- Erupção cutânea na pele;
-- Descoloração dos dedos das mãos ou dos pés;
-- Perda de fala ou movimento;
-- Dor no peito;
-- Dor de garganta;
-- Conjutivite;
-- Diarreia.
+
+- Cansaço e fadiga
+- Conjuntivite
+- Descoloração dos dedos das mãos ou dos pés
+- Diarréia
+- Dificuldade de respirar
+- Dor de cabeça
+- Dor de garganta
+- Dor no peito
+- Dores musculares
+- Erupção cutânea
+- Falta de ar
+- Febre
+- Perda de fala ou movimento
+- Perda de olfato
+- Perda de paladar
+- Tosse seca
+
+## Pneumonia
+
+- Descoloração dos dedos das mãos ou dos pés
+- dificuldade de respirar
+- dor de cabeça
+- Dor no peito
+- dores musculares
+- falta de apetite
+- Febre
+- Mal-estar
+- Tosse
+- Tosse com catarro
+- Tosse seca
+
 
 ## Sintomas comuns às 3 doenças
 - Febre;
