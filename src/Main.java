@@ -418,7 +418,10 @@ public class Main {
       System.out.println("- " + Main.H1N1 + ": " + mostraProbabilidadeDoanca(Main.H1N1_SINTOMAS, listaSintomas));
       System.out.println("- " + Main.PNEUMONIA + ": " + mostraProbabilidadeDoanca(Main.PNEUMONIA_SINTOMAS, listaSintomas));
 
-      System.out.println("\n\n");
+      System.out.println("\nProcure um médico informando o pré-diagnostico." 
+      + "\nLembre-se, o pré-diagnostico não exclui mudanças de possibilidades, pois os sintomas podem mudar e outros diagnósticos podem identificar novas doenças.");
+
+      System.out.println("\n");
     }
   }
 
