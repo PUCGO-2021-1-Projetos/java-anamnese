@@ -1,6 +1,6 @@
 # PUC Anamnese Grupo 07
 
-Este sistema tem como objetivo de apontar um ***possível pré-diagnóstico*** um paciente identificado sobre qual possível doença que ele possui através dos sintomas informados. Tal pré-diagnóstico não garante, porém, auxilia na identificação das doenças do paciente.
+Este sistema tem como objetivo de apontar um ***possível pré-diagnóstico*** uma pessoa sobre qual possível doença que ela possui através dos sintomas informados. Tal pré-diagnóstico não garante, porém, auxilia na identificação das doenças do paciente.
 
 # Contextualização
 
@@ -18,11 +18,11 @@ Este projeto visa o uso por um **profissional de saúde**.
 
 ## Quem é diagnosticado
 
-Um **paciente** atendido por um profissional de saúde.
+Uma **pessoa** com queixas de saúde.
 
 ## Benefícios oferecidos pelo Pré-diagnóstico do Sistema
 
-Com a informações dos sintomas do paciente, podemos oferecer um rápido apontamento das possíveis doenças que ele *pode* ter.
+Com a informações dos sintomas da pessoa, podemos oferecer um rápido apontamento das possíveis doenças que ele *pode* ter.
 
 # Como usar o sistema
 
@@ -60,9 +60,9 @@ Ao selecionar a `opção 1`, você terá o seguinte resultado:
 ```bash
 As doenças reconhecidas pelo sistema são:
 
-- Influenza (H1N1)
-- Pneumonia
 - Corona Virus (Covid-19)
+- H1N1 (Influenza)
+- Pneumonia
 
 --
 
@@ -72,9 +72,10 @@ Vamos continuar?
 1) Listar doenças reconhecidas
 2) Listar sintomas
 3) Realizar anamnese
--
+--
 4) Sair
 --
+
 Informe o que deseja fazer: _
 ```
 
@@ -86,42 +87,49 @@ Ao selecionar a `opção 2`, você terá o seguinte resultado:
 Vamos listar os possíveis sintomas reconhecidos. Para isso, selecione uma doença:
 
 --
-1) Influenza (H1N1)
-2) Pneumonia
-3) Corona Virus (Covid-19)
+1) Corona Virus (Covid-19)
+2) H1N1 (Influenza)
+3) Pneumonia
+--
+V) Voltar
 --
 
-Escolha uma doença para para listar os sitomas ou digite "V" para voltar: _
+Escolha uma doença para para listar os sitomas: _
 ```
 
 Ao selecionar uma doença, você terá o seguinte resultado:
 
 ```bash
-Você selecionou: INFLUENZA (H1N1) (alias: H1N1)
+Você selecionou: H1N1 (Influenza) (alias: H1N1)
 
 Os sintomas são:
 
-- Febre
-- Tosse seca
-- Dores musculares
-- Dor de cabeça
-- Dificuldade de respirar
-- Cansaço e fadiga
-- Coriza
-- Falta de apetite
 - Calafrios
-- Vômitos e náuseas
-- Dor de Garganta
-- Conjuntivite
+- Cansaço e Fadiga
+- Coriza
+- Descoloração dos dedos das mãos ou dos pés
 - Diarreia
+- Dificuldade de respirar
+- Dor de cabeça
+- Dor de Garganta
+- Dores musculares
+- Falta de apetite
+- Falta de ar
+- Febre
+- Irritação nos olhos
+- Mal-estar
+- Tosse
+- Vômitos e náuseas
 
 --
-1) Influenza (H1N1)
-2) Pneumonia
-3) Corona Virus (Covid-19)
+1) Corona Virus (Covid-19)
+2) H1N1 (Influenza)
+3) Pneumonia
+--
+V) Voltar
 --
 
-Escolha uma doença para para listar os sitomas ou digite "V" para voltar: _
+Escolha uma doença para para listar os sitomas: _
 ```
 
 ### Opção 3 - Realizar anamnese
@@ -131,42 +139,44 @@ Ao selecionar a `opção 3`, você terá o seguinte resultado:
 ```bash
 Por favor informe o(s) sintoma(s) do paciente:
 
-listaSintomas:
-
-1) Febre
-2) Tosse seca
-3) Dores musculares
-4) Dor de cabeça
-5) Dificuldade de respirar
-6) Cansaço e fadiga
-7) Coriza
-8) Falta de apetite
-9) Calafrios
-10) Vômitos e náuseas
-11) Perda de paladar
-12) Perda de olfato
-13) Erupção cutânea na pele
-14) Descoloração dos dedos das mãos ou dos pés
-15) Perda de fala ou movimento
-16) Respiração mais rápida que o normal
-17) Tosse com catarro esverdeado ou com sangue
-18) Suor noturno
-19) Dor no peito
-20) Dor de Garganta
-21) Conjutivite
-22) Diarreia
+1) Calafrios
+2) Cansaço e Fadiga
+3) Conjutivite
+4) Coriza
+5) Descoloração dos dedos das mãos ou dos pés
+6) Diarreia
+7) Dificuldade de respirar
+8) Dor de cabeça
+9) Dor de Garganta
+10) Dor no peito
+11) Dores musculares
+12) Erupção cutânea na pele
+13) Falta de apetite
+14) Falta de ar
+15) Febre
+16) Irritação nos olhos
+17) Mal-estar
+18) Perda de fala ou movimento
+19) Perda de olfato
+20) Perda de paladar
+21) Respiração mais rápida que o normal
+22) Suor noturno
+23) Tosse
+24) Tosse com catarro esverdeado ou com sangue
+25) Tosse seca
+26) Vômitos e náuseas
 --
-Informe o sintoma ou digite "D" para diagnosticar ou "V" para voltar: 
+Informe o sintoma ou ("D": diagnosticar, "V": Voltar, "R": recomeçar): _ 
 ```
 ### Opção D - Diagnosticar
 Ao selecionar a opção `Diagnosticar` o programa fará a análise e exibirá o resultado da anamnese informando qual a provável doença contraída.
 
 ```bash
 De acordo com os dados informados a probabilidade do paciente ter contraído as seguintes doenças é:
---
-- Covid-19: MUITO PROVÁVEL
-- Influenza H1N1: PROVÁVEL
-- Pneumonia: POUCO PROVÁVEL
---
-Voltar ao menu inicial? (S - Sim /N - Não): _
+- COVID19: PROVÁVEL
+- H1N1: PROVÁVEL
+- PNEUMONIA: POUCO PROVÁVEL
+
+Procure um médico informando o pré-diagnostico.
+Lembre-se, o pré-diagnostico não exclui mudanças de possibilidades, pois os sintomas podem mudar e outros diagnósticos podem identificar novas doenças.
 ```
