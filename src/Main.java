@@ -161,13 +161,13 @@ public class Main {
   // === Logo abaixo fica o local de métodos do sistema ===
   // ======================================================
   /**
+   * Menu principal
    * Este método é responsável pela chamada do menu principal
    * 
    * @param Scanner scanner - Objeto que possui suporte de resgatar entrada do
    *                          usuário
    * @return boolean - TRUE se o menu principal continua ativo. FALSE para encerrar
-   *
-   * Menu princiapl 
+   * 
    *
    */
   private static boolean menuPrincipal(Scanner scanner) throws IOException {
