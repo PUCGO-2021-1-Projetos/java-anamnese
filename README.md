@@ -1,5 +1,15 @@
 # PUC Anamnese Grupo 07
 
+## Projeto Integrador I-A - Análise e Desenvolvimento de Sistemas
+
+**Integrantes:**
+- Douglas Jordao
+- Leonardo Carvalho
+- Hugo Seabra
+- @Gisely Meneses
+
+## Sobre o Projeto
+
 Este sistema tem como objetivo de apontar um ***possível pré-diagnóstico*** uma pessoa sobre qual possível doença que ela possui através dos sintomas informados. Tal pré-diagnóstico não garante, porém, auxilia na identificação das doenças do paciente.
 
 # Contextualização
